@@ -13,7 +13,7 @@ int main(void)
 	{
 		for (n = m + 1; n <= '9'; n++)
 		{
-			for (p = m + 1; p <= '9'; p++)
+			for (p = n + 1; p <= '9'; p++)
 			{
 				if ((m != n) != p)
 				{
