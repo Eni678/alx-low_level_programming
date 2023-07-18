@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include "main.h"
 
+/*
+ * write a function that prints the alphabet.
+ */
 /**
+ * print_alphabet - function prints letters
  * main - Entry point
  *
  * Return: Always 0
