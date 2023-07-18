@@ -3,7 +3,11 @@
 #include <time.h>
 
 /**
+<<<<<<< HEAD
  * main- Entry point
+=======
+ * main- Entry Point
+>>>>>>> 8532723fca23d67ce0b1cd6db8dd2240d7ce9952
  *
  * Return: Always 0 (Success)
  */

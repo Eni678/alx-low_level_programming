@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #0x01. C - Variables, if, else, while
+=======
+ - Variables, if, else, while
+>>>>>>> 8532723fca23d67ce0b1cd6db8dd2240d7ce9952
 ## Tasks
 
 0. Positive anything is better than negative nothing
@@ -35,7 +39,10 @@ You can only use putchar twice in your code
 Write a program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.
 You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
 All your code should be in the main function
+<<<<<<< HEAD
 You can only use putchar three times in your code
+=======
+>>>>>>> 8532723fca23d67ce0b1cd6db8dd2240d7ce9952
 
 4. When I was having that alphabet soup, I never thought that it would pay off
 Write a program that prints the alphabet in lowercase, followed by a new line.
@@ -74,5 +81,8 @@ Numbers must be separated by ,, followed by a space
 Numbers should be printed in ascending order
 You can only use the putchar function (every other function (printf, puts, etc…) is forbidden)
 All your code should be in the main function
+<<<<<<< HEAD
 You can only use putchar four times maximum in your code
 You are not allowed to use any variable of type char
+=======
+>>>>>>> 8532723fca23d67ce0b1cd6db8dd2240d7ce9952
