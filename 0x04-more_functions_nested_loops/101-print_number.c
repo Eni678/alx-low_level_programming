@@ -1,36 +1,28 @@
+#include <stdio.h>
 #include "main.h"
-void print_integer(int m);
-
 /**
- * print_number - a fuction that prints an integer
- * @n: An input integer
- * Return: void
+ * print_integer - Prints an integer to the standard output
+ *
+ * @n: The integer to print
+ *
+ * This function takes an integer @n as input and prints it to the standard
+ * output using that printf function. The integer is printed  as a decimal
+ * number with no leading zeros or sign
+ * print_number - this function prints out the num
+ * Return: None
  */
 void print_number(int n)
 {
-	if (n == 0)
-		_putchar('0');
-	else if (n < 0)
+	int num = n;
+
+	if (n < 0)
 	{
 		_putchar('-');
-		print_integer(n * -1);
+		num = -num;
 	}
-	else
-		print_integer(n);
-}
-
-/**
- * print_integer - A function to printing n
- * @m: an input unsigned integer
- * Return: void
- */
-void print_integer(int m)
-{
-	int i = 1000000000;
-
-	for (; i >= 1; i /= 10)
-		if (m / i != 0)
-		{
-			_putchar((m / i) % 10 + '0')
-		}
+	if (n / 10 > 0)
+	{
+		print_number(num / 10);
+	}
+	_putchar((num % 10) + 48);
 }
