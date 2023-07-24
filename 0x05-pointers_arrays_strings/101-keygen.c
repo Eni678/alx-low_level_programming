@@ -6,39 +6,51 @@
 
 /**
  * main - Generates a random password and prints to stdout
- *
+ * program 101-crackme.
  * Return: Always 0.
  */
 
-unsigned long check_sum(char *str)
-{
-	unsigned long sum = 0;
-
-	while (*str != '\0')
-	{
-		sum += *str;
-		str++;
-	}
-	return (sum);
-}
 int main(void)
 {
-	char password[PASS_LEN];
-	int i;
-	int sum = 0;
-	int random_num;
+	char password[84];
+	int index = 0, sum = 0, diff_half1, diff_half2;
 
-	srand(time(NULL));
+	srand(time(0));
 
-	for (i = 0; i < PASS_LEN; i++)
+	while (sum < 2772)
+
 	{
-		random_num = rand() % 78;
-
-		password[i] = random_num + '0';
-		sum += password[i];
+		password[index] = 33 + rand() % 94;
+		sum += password[index++];
 	}
-	password[PASS_LEN] = '\0';
-	printf("%ul\n", sum);
+	password[index] = '\0';
 
+	if (sum != 2772)
+	{
+		diff_half1 = (sum - 2772) / 2;
+		diff_half2 = (sum - 2772) / 2;
+
+		if ((sum - 2772) % 2 != 0)
+			diff_half1++;
+
+		for (index = 0; password[index]; index++)
+
+		{
+			if (password[index] >= (33 + diff_half1))
+			{
+				password[index] -= diff_half1;
+				break;
+			}
+		}
+		for (index = 0; password[index]; index++)
+		{
+			if (password[index] >= (33 + diff_half2))
+			{
+				password[index] -= diff_half2;
+				break;
+			}
+		}
+	}
+	printf("%s", password);
 	return (0);
 }
