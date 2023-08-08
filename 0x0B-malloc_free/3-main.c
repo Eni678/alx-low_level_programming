@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int **allox_grid(int, int);
+int **alloc_grid(int, int);
 
 /**
  * print_grid - prints a grid of integers
@@ -49,7 +49,7 @@ int main(void)
 	{
 		return (1);
 	}
-	print_grid(grid, 6, 4);
+	print_grid(grid, h, w);
 	printf("\n");
 	free(grid);
 	return (0);
