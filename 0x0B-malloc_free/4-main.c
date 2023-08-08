@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int **alloc_grid(int, int)
+
 /**
  * print_grid - prints a grid of integers
  * @grid: the address of the two dimensional grid
