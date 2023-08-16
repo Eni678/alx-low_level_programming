@@ -1,0 +1,1 @@
+0x0F-function_pointers- a pointer that can act as a function by pointing to a function
