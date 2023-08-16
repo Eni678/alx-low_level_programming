@@ -11,19 +11,21 @@
  */
 int main(int argc, char *argv[])
 {
-	int a, b, result;
-	int (*op_func)(int, int);
+	int (*func)(int, int);
 
 	if (argc != 4)
 	{
+		printf("Error\n");
 		exit(98);
 	}
 
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
+	func = get_op_func(argv[2]);
+	if (func == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
 
-	op_func = get_op_func(argv[2]);
-	result = op_func(a, b);
-	printf("%d\n", result);
+	printf("%d\n", func(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
