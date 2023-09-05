@@ -29,8 +29,7 @@ int main(int argc, char *argv[])
 	from_fd = open(argv[1], O_RDONLY);
 	if (from_fd < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
-			       	argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	to_fd = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, permissions);
@@ -88,7 +87,7 @@ int safe_close(int description)
 	int error;
 
 	error = close(description);
-	if(error < 0)
+	if (error < 0)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", description);
 	return (error);
 }
